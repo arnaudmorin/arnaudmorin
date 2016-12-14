@@ -265,55 +265,6 @@ Components:
         </div>
     </div>
 </section>
-<!--
-<section id="professional-skills" class="professional-skills">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-10 col-sm-offset-2">
-                <ul>
-                    <li class="title"><span class="glyphicon glyphicon-tasks"></span>Professional skills</li>
-                    <li>
-                        <p>Asterisk, SIP, WebRTC and other Open Source related Telecom application<span class="annotation pull-right">95%</span></p>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <p>Web development, PHP, HTML, Javascript, CSS<span class="annotation pull-right">95%</span></p>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <p>System Administration on Debian / Ubuntu<span class="annotation pull-right">90%</span></p>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <p>Debian Packaging<span class="annotation pull-right">75%</span></p>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <p>System Administration on RedHat / Fedora<span class="annotation pull-right">70%</span></p>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <p>Python, <span class="annotation pull-right">95%</span></p>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end Professional skills -->
 
 <!-- Personal skills -->
 <section id="personal-skills" class="personal-skills">
@@ -655,14 +606,10 @@ Components:
                 <ul>
                     <li class="title"><span class="glyphicon glyphicon-envelope"></span>Contact</li>
                     <li class="static">
-                        <span class="note">Address</span>
-                        <p><strong>2 hameau de la bigotais</strong></p>
-                        <p><strong>35440 Feins</strong></p>
-                        <span class="note">Mobile</span>
-                        <p><strong>+33 6 18 67 10 34</strong></p>
                         <span class="note">Email</span>
                         <p><strong><a href="mailto:arnaud.morin@gmail.com">arnaud.morin@gmail.com</a></strong></p>
                         <hr class="empty">
+                        <span class="note">Or contact form:</span>
                         <form action="process.php" method="post" class="form">
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
