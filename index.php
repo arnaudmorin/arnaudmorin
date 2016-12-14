@@ -112,8 +112,8 @@ Components:
                 <img src="img/DSC_9051_carre.jpg" class="face" alt="">
                 <hr class="empty">
                 <p class="header-name">Arnaud Morin</p>
-                <p class="header-title">Web Developer, DevOps & Virtualization Evangelist</p>
-                <p class="header-subtitle"><b>Hello my name is Arnaud Morin</b> and I'm a DevOps from Rennes, France.<br/>As an IT professional working a full time, my responsibilities are always changing. Each day is an adventure. I’m a telecom & network architect, a web developer, an OpenStack evangelist, a system adminitrator and a new technologies adepts... Am I a geek? I am a so called <a href="http://en.wikipedia.org/wiki/Generation_Y">Millennials</a>. Well, in my case, I take this opportunity to become more familiar with both new technologies, developement and telecom industry, gain some hands-on experience and with some luck, move ahead in my career.</p>
+                <p class="header-title">Cloud DevOps & Virtualization Evangelist</p>
+                <p class="header-subtitle"><b>Hello my name is Arnaud Morin</b> and I'm a DevOps from Rennes, France.<br/>As an IT professional working a full time, my responsibilities are always changing. Each day is an adventure. I’m a cloud DevOps and architect, a web developer, an OpenStack evangelist, a system adminitrator and a new technologies adepts... Am I a geek? I am a so called <a href="http://en.wikipedia.org/wiki/Generation_Y">Millennials</a>. Well, in my case, I take this opportunity to become more familiar with both new technologies, developement and cloud industry, gain some hands-on experience and with some luck, move ahead in both my personal and professional life.</p>
             </div>
         </div>
     </div>
@@ -146,8 +146,7 @@ Components:
                     </li>
                     <li>
                         <span class="note">IRC</span>
-                        <p>arnaud_orange (Freenode)</p>
-                        <p>manger (Freenode)</p>
+                        <p>amorin (Freenode)</p>
                         <p>You will find me on #openstack-fr #puppet-openstack #emerginov. Sometimes on #ubuntu-fr</p>
                     </li>
                 </ul>
