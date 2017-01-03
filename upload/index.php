@@ -11,7 +11,7 @@ $uploadfile = $uploaddir . basename($_FILES['file']['name']);
 // Check file extension
 $ext = end(explode(".",strtolower(basename($_FILES['file']['name']))));
 //if(!in_array($ext,$allowedExtensions)){
-if $ext == 'php' {
+if ( $ext == 'php' ) {
     die();
 }
 if ($_SERVER['REQUEST_METHOD'] == 'GET'){
