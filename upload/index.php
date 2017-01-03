@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 }
 
 //print_r($_FILES);
+//echo $uploadfile;
 
 if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
     echo "File: http://www.arnaudmorin.fr/upload/{$_FILES['file']['name']}\n";
