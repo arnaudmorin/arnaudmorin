@@ -17,7 +17,7 @@ if (!$name) $errors[count($errors)] = "Please enter your name!";
 if (!$email) $errors[count($errors)] = "Please enter your email!"; 
 if (!$comment) $errors[count($errors)] = "Please enter a message!"; 
 if (!$anti42) $errors[count($errors)] = "Wrong anti-spam answer!"; 
-else if ($anti42 != '42') $errors[count($errors)] = "Wrong anti-spam answer!";
+else if ($anti42 != '43') $errors[count($errors)] = "Wrong anti-spam answer!";
 
 //if the errors array is empty, send the mail
 if (!$errors) {

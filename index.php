@@ -624,7 +624,7 @@ Components:
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-bold"></span></span>
-                                <input name="anti42" type="text" class="form-control" id="anti42" placeholder="Anti-spam: 40+2=">
+                                <input name="anti42" type="text" class="form-control" id="anti42" placeholder="Anti-spam: 40+3=">
                             </div>
                             <button type="submit" id="submit" class="btn btn-success pull-right"><span class="glyphicon glyphicon-send"></span> Send message</button>
                         </form>
