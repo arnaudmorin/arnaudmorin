@@ -48,7 +48,8 @@ $(window).scroll(function(){
 $(document).ready(function () {
         //if submit button is clicked
         $('#submit').click(function () {
-                $('.error').fadeOut('slow');
+		// Purge error
+		$('.error').replaceWith('<div class="error"> </div>');
 
                 //Get the data from all the fields
                 var name = $('input[name=name]');
@@ -114,9 +115,11 @@ $(document).ready(function () {
                 }
 
                 //organize the data properly
-                var data = 'name=' + name.val() + '&email=' + email.val() + '&website='
-                        website.val() + '&comment=' + encodeURIComponent(comment.val())
-            '&anti42=' + anti42.val();
+                var data = 'name=' + name.val()
+                    + '&email=' + email.val()
+                    + '&website=' + website.val()
+                    + '&comment=' + encodeURIComponent(comment.val())
+                    + '&anti42=' + anti42.val();
 
                 //disabled all the text fields
                 $('.text').attr('disabled', 'true');
@@ -149,6 +152,7 @@ $(document).ready(function () {
                                         //show the errror
                                         $('.error').replaceWith('<div class="error">' + html + '</div>');
                                         $('.error').fadeIn('slow');
+                                        console.log(html);
                         }
                 });
 

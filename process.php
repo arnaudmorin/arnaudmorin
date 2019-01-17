@@ -11,9 +11,6 @@ $comment = ($_GET['comment']) ? $_GET['comment'] : $_POST['comment'];
 $anti42 = ($_GET['anti42']) ? $_GET['anti42'] : $_POST['anti42'];
 $code = $_SESSION['code'];
 
-//flag to indicate which method it uses. If POST set it to 1
-if ($_POST) $post=1;
-
 //Simple server side validation for POST data, of course, you should validate the email
 if (!$name) $errors[count($errors)] = "Please enter your name!";
 if (!$email) $errors[count($errors)] = "Please enter your email!";
@@ -48,16 +45,7 @@ if (!$errors) {
         //send the mail
         $result = sendmail($to, $subject, $message, $from);
 
-        //if ($_POST) {
-        //      if ($result) echo 'Thank you, I will consult the message as soon as possible!';
-        //      else echo 'Sorry an error occured, try again later!';
-
-        //else if GET was used, return the boolean value so that
-        //ajax script can react accordingly
-        //1 means success, 0 means failed
-        //} else {
-            echo $result;
-        //}
+        echo $result;
 
 //if the errors array has values
 } else {
@@ -67,7 +55,6 @@ if (!$errors) {
         //exit;
         //echo '0';
 }
-
 
 //Simple mail function with HTML header
 function sendmail($to, $subject, $message, $from) {

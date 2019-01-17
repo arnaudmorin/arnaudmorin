@@ -36,7 +36,7 @@ header('Content-Type: image/png');
 @imagedestroy($image);
 
 // Store on server the code
-$_SESSION['AntiSpamImage'] = $code;
+$_SESSION['code'] = $code;
 
 exit();
 
