@@ -45,6 +45,9 @@ if (!$errors) {
         //send the mail
         $result = sendmail($to, $subject, $message, $from);
 
+        // Unset code
+        $_SESSION['code'] = '';
+
         echo $result;
 
 //if the errors array has values
