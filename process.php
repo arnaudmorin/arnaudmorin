@@ -27,7 +27,7 @@ if (!$errors) {
         $from = $name . ' <' . $email . '>';
 
         //subject and the html message
-        $subject = '[arnaudmorin.fr] nouveau message' . $name;
+        $subject = '[arnaudmorin.fr] nouveau message de ' . $name;
         $message = '
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
