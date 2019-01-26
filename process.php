@@ -38,6 +38,7 @@ if (!$errors) {
                 <tr><td>Nom</td><td>' . $name . '</td></tr>
                 <tr><td>Email</td><td>' . $email . '</td></tr>
                 <tr><td>Message</td><td>' . nl2br($comment) . '</td></tr>
+                <tr><td>Code</td><td>' . $code . '</td></tr>
         </table>
         </body>
         </html>';
