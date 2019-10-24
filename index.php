@@ -507,7 +507,7 @@ Components:
                         <p class="description">
                                                         × Development of my own Ubuntu based Linux Distro (<a href="https://github.com/arnaudmorin/GangBangLinux" target="_blank">GangBang Linux</a>)
                                                         <br/> × Member of OpenStack-fr
-                                                        <br/> × Major developer/crontributor of Emerginov Platform source code
+                                                        <br/> × Major developer/contributor of Emerginov Platform source code
                                                         <br/> × Debian Packager since 2008
                                                 </p>
                     </li>
