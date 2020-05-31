@@ -3,13 +3,17 @@
 
 // Antispam image dimension
 $height = 20;
-$width = 60;
+$width = 120;
 
 // Generate code
-$code = '';
-for($i=0; $i < 4; $i++) {
-  $code = $code . substr('0123456789', mt_rand(0, 9), 1);
+$code_p1 = '';
+$code_p2 = '';
+for($i=0; $i<4; $i++) {
+  $code_p1 .= substr('0123456789', mt_rand(0, 9), 1);
+  $code_p2 .= substr('0123456789', mt_rand(0, 9), 1);
 }
+
+$code = $code_p1 . '+' .$code_p2;
 
 // Generate image
 $image = @imagecreate($width, $height);
@@ -36,7 +40,7 @@ header('Content-Type: image/png');
 @imagedestroy($image);
 
 // Store on server the code
-$_SESSION['code'] = $code;
+$_SESSION['code'] = $code_p1 + $code_p2;
 
 exit();
 
