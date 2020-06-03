@@ -6,10 +6,10 @@
 // POST - in case user does not support javascript, we'll use POST instead
 $name = ($_GET['name']) ? $_GET['name'] : $_POST['name'];
 $email = ($_GET['email']) ? $_GET['email'] : $_POST['email'];
-$website = ($_GET['website']) ? $_GET['website'] : $_POST['website'];
 $comment = ($_GET['comment']) ? $_GET['comment'] : $_POST['comment'];
 $anti42 = ($_GET['anti42']) ? $_GET['anti42'] : $_POST['anti42'];
 $code = $_SESSION['code'];
+$errors = [];
 
 //Simple server side validation for POST data, of course, you should validate the email
 if (!$name) $errors[count($errors)] = "Please enter your name!";

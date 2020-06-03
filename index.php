@@ -624,8 +624,17 @@ Components:
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-bold"></span></span>
-                                <img src='captcha.php'>
-                                <input name="anti42" type="text" class="form-control" id="anti42" placeholder="Anti-spam:">
+                                <img src='captcha2.php' width=100px>
+                                <label for="anti42">Anti-spam feature: this is a </label>
+                                <select id="anti42" name="anti42">
+                                  <option value="" selected>Please choose</option>
+                                  <option value="1">dog</option>
+                                  <option value="4">cat</option>
+                                  <option value="3">elephant</option>
+                                  <option value="5">mouse</option>
+                                  <option value="6">chicken</option>
+                                  <option value="2">cow</option>
+                                </select>
                             </div>
                             <button type="submit" id="submit" class="btn btn-success pull-right"><span class="glyphicon glyphicon-send"></span> Send message</button>
                         </form>
