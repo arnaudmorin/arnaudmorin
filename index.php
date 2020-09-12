@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+@session_start();
+
+# Generate random number between 1 and 6
+$_SESSION['anti42'] = rand(1, 6);
+$_SESSION['anti43'] = rand(1, 6);
+?>
 
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -624,9 +631,23 @@ Components:
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-bold"></span></span>
-                                <img src='captcha2.php' width=100px>
+                                <img src='captcha2.php?i=42' width=100px>
                                 <label for="anti42">Anti-spam feature: this is a </label>
                                 <select id="anti42" name="anti42">
+                                  <option value="" selected>Please choose</option>
+                                  <option value="1">dog</option>
+                                  <option value="4">cat</option>
+                                  <option value="3">elephant</option>
+                                  <option value="5">mouse</option>
+                                  <option value="6">chicken</option>
+                                  <option value="2">cow</option>
+                                </select>
+                            </div>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-bold"></span></span>
+                                <img src='captcha2.php?i=43' width=100px>
+                                <label for="anti43">Anti-spam feature #2: this is a </label>
+                                <select id="anti43" name="anti43">
                                   <option value="" selected>Please choose</option>
                                   <option value="1">dog</option>
                                   <option value="4">cat</option>

@@ -57,6 +57,7 @@ $(document).ready(function () {
                 var emailAddress = $('input[name=email]').val();
                 var comment = $('textarea[name=comment]');
                 var anti42 = $('select[name=anti42]');
+                var anti43 = $('select[name=anti43]');
                 function isValidEmailAddress(emailAddress) {
                         var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
                         return pattern.test(emailAddress);
@@ -113,11 +114,23 @@ $(document).ready(function () {
                         $('.error').hide();
                 }
 
+                if (anti43.val() == '') {
+                        anti43.addClass('highlight');
+                        $('.error').replaceWith('<div class="error">Bad anti-spam answer!</div>');
+                        $('.error').fadeIn('slow');
+                        $(anti43).focus();
+                        return false;
+                } else {
+                        name.removeClass('highlight');
+                        $('.error').hide();
+                }
+
                 //organize the data properly
                 var data = 'name=' + name.val()
                     + '&email=' + email.val()
                     + '&comment=' + encodeURIComponent(comment.val())
-                    + '&anti42=' + anti42.val();
+                    + '&anti42=' + anti42.val()
+                    + '&anti43=' + anti43.val();
 
                 //disabled all the text fields
                 $('.text').attr('disabled', 'true');
@@ -130,7 +143,7 @@ $(document).ready(function () {
                         //this is the php file that processes the data and send mail
                         url : "process.php",
                         //GET method is used
-                        type : "GET",
+                        type : "POST",
                         //pass the data
                         data : data,
                         //Do not cache the page

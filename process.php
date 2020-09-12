@@ -8,7 +8,7 @@ $name = ($_GET['name']) ? $_GET['name'] : $_POST['name'];
 $email = ($_GET['email']) ? $_GET['email'] : $_POST['email'];
 $comment = ($_GET['comment']) ? $_GET['comment'] : $_POST['comment'];
 $anti42 = ($_GET['anti42']) ? $_GET['anti42'] : $_POST['anti42'];
-$code = $_SESSION['code'];
+$anti43 = ($_GET['anti43']) ? $_GET['anti43'] : $_POST['anti43'];
 $errors = [];
 
 //Simple server side validation for POST data, of course, you should validate the email
@@ -16,7 +16,9 @@ if (!$name) $errors[count($errors)] = "Please enter your name!";
 if (!$email) $errors[count($errors)] = "Please enter your email!";
 if (!$comment) $errors[count($errors)] = "Please enter a message!";
 if (!$anti42) $errors[count($errors)] = "Wrong anti-spam answer!";
-else if ($anti42 != $code) $errors[count($errors)] = "Wrong anti-spam answer!";
+if (!$anti43) $errors[count($errors)] = "Wrong anti-spam answer!";
+if ($anti42 != $_SESSION['anti42']) $errors[count($errors)] = "Wrong anti-spam answer!";
+if ($anti43 != $_SESSION['anti43']) $errors[count($errors)] = "Wrong anti-spam answer!";
 
 //if the errors array is empty, send the mail
 if (!$errors) {
